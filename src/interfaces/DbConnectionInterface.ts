@@ -3,5 +3,5 @@ import * as Sequelize from 'sequelize';
 
 export interface DbConnection extends ModelsInterface{
 
-    sequelize: Sequelize.sequelize
+    sequelize: Sequelize.Sequelize
 }
