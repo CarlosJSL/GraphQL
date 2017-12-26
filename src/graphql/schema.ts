@@ -1,4 +1,7 @@
 import {makeExecutableSchema} from 'graphql-tools'
+import {Query} from './query'
+import {Mutation} from './mutation'
+import { userTypes } from './resources/user/user.schema';
 
 const SchemaDefinition = `
     typeSchema{
@@ -7,4 +10,11 @@ const SchemaDefinition = `
     }
 `
 
-export default makeExecutableSchema({typeDefs,resolvers})
+export default makeExecutableSchema({
+    typeDefs: [
+        SchemaDefinition,
+        Query,
+        Mutation,
+        userTypes
+    ]
+})
